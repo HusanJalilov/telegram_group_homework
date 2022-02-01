@@ -17,16 +17,12 @@ def find_all_users_id(data: dict)->list:
         div=dict(col[x])
         
         if 'actor_id' in div:
-            mir=div['actor_id']
-            s.append(mir)
+            key=div['actor_id']
+            s.append(key)
         
         
-    return s
-        
+    return s,len(s),type(s)    
     
-    
-
-
 f=open('result.json',encoding='utf8').read()
 data=json.loads(f)
 print(find_all_users_id(data))

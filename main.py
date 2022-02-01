@@ -31,7 +31,7 @@ def find_all_users_id(data: dict)->list:
         for item in user_id:
             if item not in user_id2:
                 user_id2.append(item)
-    return user_id2
+    return user_id2,len(user_id2),type(user_id2)
 
 f=open('result.json',encoding='utf8').read()
 data=json.loads(f)
