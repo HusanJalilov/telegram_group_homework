@@ -1,3 +1,4 @@
+from unittest import result
 from read_data import read_data
 
 def find_all_users_id(data: dict)->list:
@@ -9,4 +10,6 @@ def find_all_users_id(data: dict)->list:
     Returns:
         list: List containing all the users id
     """
-    return
+    print(data)
+data=open('result.json').read()
+print(find_all_users_id(data))
