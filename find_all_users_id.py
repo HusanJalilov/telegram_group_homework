@@ -15,13 +15,14 @@ def find_all_users_id(data: dict)->list:
     col=data["messages"]
     for x in range(len(col)):
         div=dict(col[x])
-        mir=div["id"]
-        s.append(mir)
         
-    return mir,type(mir),s
+        if 'actor_id' in div:
+            mir=div['actor_id']
+            s.append(mir)
         
-    
-    
+        
+    return s
+        
     
     
 
