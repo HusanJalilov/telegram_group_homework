@@ -12,6 +12,7 @@ def find_all_users_id(data: dict)->list:
         list: List containing all the users id
     """
     s=[]
+    d=[]
     col=data["messages"]
     for x in range(len(col)):
         div=dict(col[x])
@@ -19,6 +20,12 @@ def find_all_users_id(data: dict)->list:
         if 'actor_id' in div:
             key=div['actor_id']
             s.append(key)
+    # for itm in s:
+    #     print(itm)
+    #     if itm in s:
+    #         print("true")
+    #     else:
+    #         print("folssssssssssssssse")
         
         
     return s,len(s),type(s)    
