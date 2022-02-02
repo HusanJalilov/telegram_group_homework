@@ -25,7 +25,6 @@ def find_all_users_id(data: dict)->list:
     #     if itm in s:
     #         print("true")
     #     else:
-    #         print("folssssssssssssssse")
         
         
     return s,len(s),type(s)    
