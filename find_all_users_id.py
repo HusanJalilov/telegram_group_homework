@@ -30,6 +30,6 @@ def find_all_users_id(data: dict)->list:
         
     return s,len(s),type(s)    
     
-f=open('result.json',encoding='utf8').read()
+f=open('data/result.json',encoding='utf8').read()
 data=json.loads(f)
 print(find_all_users_id(data))
