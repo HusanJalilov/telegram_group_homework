@@ -12,6 +12,6 @@ def find_number_of_messages(data: dict)->int:
     """
     return len(data['messages'])
 
-f=open('result.json',encoding='utf8').read()
+f=open('data/result.json',encoding='utf8').read()
 data=json.loads(f)
 print(find_number_of_messages(data))
