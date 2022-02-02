@@ -27,7 +27,7 @@ def find_all_users_id(data: dict)->list:
     #     else:
         
         
-    return s,len(s),type(s)    
+    return s  
     
 f=open('data/result.json',encoding='utf8').read()
 data=json.loads(f)
