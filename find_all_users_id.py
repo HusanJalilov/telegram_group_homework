@@ -15,19 +15,13 @@ def find_all_users_id(data: dict)->list:
     d=[]
     col=data["messages"]
     for x in range(len(col)):
-        div=dict(col[x])
+        div=col[x]
         
         if 'actor_id' in div:
             key=div['actor_id']
             s.append(key)
-    # for itm in s:
-    #     print(itm)
-    #     if itm in s:
-    #         print("true")
-    #     else:
-        
-        
-    return s  
+    
+    return s
     
 f=open('data/result.json',encoding='utf8').read()
 data=json.loads(f)
