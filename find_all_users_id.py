@@ -24,8 +24,7 @@ def find_all_users_id(data: dict)->list:
         if i not in itm:
             itm.append(i)
 
-    return itm,len(itm)
-    
+    return itm
 f=open('data/result.json',encoding='utf8').read()
 data=json.loads(f)
 print(find_all_users_id(data))
