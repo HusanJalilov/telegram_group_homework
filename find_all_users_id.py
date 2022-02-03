@@ -16,7 +16,7 @@ def find_all_users_id(data: dict)->list:
     itm=[]
     col=data["messages"]
     for x in range(len(col)):        
-        ser=col[x].get('actor_id',False)
+        ser=col[x].get('from_id',False)
         if ser:
             s.append(ser)
     
