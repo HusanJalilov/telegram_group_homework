@@ -1,3 +1,4 @@
+
 from read_data import read_data
 import json
 
@@ -10,19 +11,23 @@ def find_all_users_name(data: dict)->list:
     Returns:
         list: List containing all the users name.
     """
+    
     s=[]
+    itm=[]
     col=data["messages"]
-    for x in range(len(col)):
-        div=dict(col[x])
-        
-        if 'actor' in div:
-            key=div['actor']
-            s.append(key)
-        
-        
-    return s,len(s),type(s)    
+    for x in range(len(col)):        
+        ser=col[x].get('actor',False)
+        if ser:
+            s.append(ser)
+    
+    for i in s:
+        if i not in itm:
+            itm.append(i)
+
+    return itm
+
+
     
 f=open('data/result.json',encoding='utf8').read()
 data=json.loads(f)
 print(find_all_users_name(data))
-
